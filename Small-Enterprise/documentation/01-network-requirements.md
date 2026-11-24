@@ -54,7 +54,6 @@ The available equipment includes:
 
 - Cisco Catalyst 24-port or 48-port switches.
 - One router.
-- One firewall.
 - One network rack.
 - Ethernet cabling.
 
