@@ -64,7 +64,7 @@ DSW2 currently operates as a Layer 2 distribution switch. Gateway redundancy is 
 
 ### Network Topology
 
-![NexaTech Network Topology](documentation/images/full-topology.png)
+![NexaTech Network Topology](topology/01%20–%20Full%20network%20overview.png)
 
 *Logical network topology implemented in Cisco Packet Tracer.*
 
