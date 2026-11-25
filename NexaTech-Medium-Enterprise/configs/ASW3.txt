@@ -1,0 +1,45 @@
+enable
+configure terminal
+hostname ASW3
+spanning-tree mode rapid-pvst
+!
+vlan 10
+ name Development
+vlan 20
+ name Sales
+vlan 30
+ name Finance
+vlan 40
+ name IT
+vlan 50
+ name HR
+vlan 60
+ name Servers
+vlan 70
+ name Management
+vlan 99
+ name Native
+exit
+!
+interface range FastEthernet0/1 - 2
+ switchport mode access
+ switchport access vlan 20
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface range FastEthernet0/3 - 4
+ switchport mode access
+ switchport access vlan 30
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface range GigabitEthernet0/1 - 2
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,30,40,50,60,70,99
+!
+interface Vlan1
+ no ip address
+ shutdown
+end
+write memory
